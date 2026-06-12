@@ -28,18 +28,10 @@
     <nav>
       <ul>
         
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-
-        <li><a href="services.html">Services</a></li>
-        
-        <li><a href="product.html">Products</a></li>
-        <li><a href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-</svg></a></li>
-        <li><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-</svg></a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+         <li><a href="#subscribe">Subscribe</a></li>
+            <li><a href="#contact">Contact</a></li>
      </ul>   
     </nav>
   </header>
@@ -93,26 +85,50 @@
   </section>
 
   <!-- Subscription Section -->
-  <section class="subscribe-section">
+  <section id="subscribe" class="subscribe-section">
     <h2>Never miss our updates about new arrivals and special offers</h2>
     <p>Get the latest news and updates from Floral World</p>
-    <form class="subscribe-form">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
+    <form class="subscribe-form" id="subscribeForm">
+
+  <input
+    type="text"
+    name="fullname"
+    placeholder="Full Name"
+    required
+    minlength="3"
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  >
+
+  <input
+    type="tel"
+    name="phone"
+    placeholder="Phone Number"
+    pattern="[0-9]{8}"
+    required
+  >
+
+  <button type="submit">Subscribe</button>
+
+</form>
   </section>
 
   <!-- Footer Section -->
-  <footer class="footer">
+  <footer id="contact" class="footer">
     <div class="footer-container">
       
       <div class="footer-left">
         <h3>QUICK LINKS</h3>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="product.html">Product</a></li>
+          <li><a href="#home" >Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#subscribe">Subscribe</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -154,7 +170,14 @@
   </div>
   </footer>
 
-  
+  <script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector("nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});
+</script>
 
 </body>
 
